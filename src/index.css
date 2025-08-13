@@ -39,20 +39,17 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Bug-specific tokens */
+    --bug-red: 0 82% 48%;
+    --bug-black: 0 0% 10%;
   }
 
   .dark {
@@ -91,6 +88,10 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Bug-specific tokens */
+    --bug-red: 0 80% 52%;
+    --bug-black: 0 0% 88%;
   }
 }
 
@@ -101,5 +102,17 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .app-gradient {
+    background-image:
+      radial-gradient(900px 420px at 50% 0%, hsl(var(--primary) / 0.12), transparent 60%),
+      radial-gradient(700px 360px at 20% 100%, hsl(var(--accent) / 0.08), transparent 60%);
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
   }
 }

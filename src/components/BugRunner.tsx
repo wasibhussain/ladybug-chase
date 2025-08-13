@@ -225,7 +225,7 @@ const BugRunner: React.FC = () => {
       {/* Instructions */}
       <header className="absolute inset-x-0 top-0 z-10 flex items-center justify-center p-6">
         <div className="rounded-md bg-card/70 backdrop-blur supports-[backdrop-filter]:bg-card/60 px-4 py-2 text-center shadow-sm border animate-enter">
-          <h1 className="text-2xl font-bold tracking-tight">Red and Black Bug Runner</h1>
+          <h1 className="text-2xl font-bold tracking-tight">Fix The Bug</h1>
           <p className="text-sm text-muted-foreground">
             Drag the bug to the center. Release to let it run to random sides.
           </p>
